@@ -78,24 +78,23 @@ const Content: React.FC = () => {
     }
 
     // 6️⃣ Instantiate one leaf per face
+    const density = 0.2; // 20% of faces
     const instances: InstancedMesh[] = [];
+
     faceCenters.forEach((center, idx) => {
+      // Only proceed for ~20% of faces:
+      if (Math.random() > density) {
+        return;
+      }
+
       const normal = faceNormals[idx];
       const inst = leafPlane.createInstance(`leafInst_${idx}`);
-
-      // Position: slightly offset along face normal so it doesn’t z-fight
-      inst.position = center.add(normal.scale(0.01));
-
-      // Billboard so each leaf always faces the camera
+      inst.position   = center.add(normal.scale(0.01));
       inst.billboardMode = Mesh.BILLBOARDMODE_ALL;
 
-      // Random variation in scale
       const s = 0.5 + Math.random() * 0.7;
-      inst.scaling = new Vector3(s, s, s);
-
-      // (Optional) random rotation around Z—comment out if you just want pure billboard
+      inst.scaling    = new Vector3(s, s, s);
       inst.rotation.z = Math.random() * Math.PI * 2;
-
       instances.push(inst);
     });
 
