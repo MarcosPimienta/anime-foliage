@@ -36,9 +36,9 @@ const Content: React.FC = () => {
 
     // 2️⃣ Assign a cel-shaded, alpha-masked material to the base leaf
     const leafMat = new StandardMaterial('leafMat', scene);
-    leafMat.diffuseTexture = new Texture('/textures/leaf.png', scene);
+    leafMat.diffuseTexture = new Texture('/textures/alphaleaf.png', scene);
     leafMat.diffuseTexture.hasAlpha = true;
-    leafMat.backFaceCulling = false;
+    leafMat.backFaceCulling = true;
     leafMat.emissiveColor = new Color3(1, 1, 1);
     leafPlane.material = leafMat;
 
