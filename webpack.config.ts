@@ -1,13 +1,13 @@
 import path from "path";
+import { fileURLToPath } from 'url';
 import webpack from "webpack";
 import HtmlWebpackPlugin from "html-webpack-plugin";
 import ForkTsCheckerWebpackPlugin from "fork-ts-checker-webpack-plugin";
-import { Configuration as WebpackConfig } from "webpack";
-import { Configuration as DevServerConfig } from "webpack-dev-server";
 
-interface Configuration extends WebpackConfig {
-  devServer?: DevServerConfig;
-}
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
+type Configuration = webpack.Configuration;
 
 const isProd = process.env.NODE_ENV === "production";
 const repoBase = isProd ? "/anime-foliage/" : "/";
@@ -45,7 +45,6 @@ const config: Configuration = {
   },
   plugins: [
     new webpack.DefinePlugin({
-      "process.env.NODE_ENV": JSON.stringify(process.env.NODE_ENV),
       "process.env.PUBLIC_URL": JSON.stringify(repoBase.slice(0,-1)),
     }),
     new webpack.ProvidePlugin({
