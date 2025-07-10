@@ -6502,7 +6502,7 @@ object-assign
 
 /**
  * @license React
- * react-dom-client.production.js
+ * react-dom-client.development.js
  *
  * Copyright (c) Meta Platforms, Inc. and affiliates.
  *
@@ -6512,7 +6512,7 @@ object-assign
 
 /**
  * @license React
- * react-dom-server-legacy.browser.production.js
+ * react-dom-server-legacy.browser.development.js
  *
  * Copyright (c) Meta Platforms, Inc. and affiliates.
  *
@@ -6522,7 +6522,7 @@ object-assign
 
 /**
  * @license React
- * react-dom-server.browser.production.js
+ * react-dom-server.browser.development.js
  *
  * Copyright (c) Meta Platforms, Inc. and affiliates.
  *
@@ -6542,7 +6542,7 @@ object-assign
 
 /**
  * @license React
- * react-dom.production.js
+ * react-dom.development.js
  *
  * Copyright (c) Meta Platforms, Inc. and affiliates.
  *
@@ -6562,7 +6562,7 @@ object-assign
 
 /**
  * @license React
- * react-jsx-runtime.production.js
+ * react-jsx-runtime.development.js
  *
  * Copyright (c) Meta Platforms, Inc. and affiliates.
  *
@@ -6572,7 +6572,7 @@ object-assign
 
 /**
  * @license React
- * react-reconciler.production.js
+ * react-reconciler.development.js
  *
  * Copyright (c) Meta Platforms, Inc. and affiliates.
  *
@@ -6582,7 +6582,7 @@ object-assign
 
 /**
  * @license React
- * react.production.js
+ * react.development.js
  *
  * Copyright (c) Meta Platforms, Inc. and affiliates.
  *
@@ -6602,7 +6602,7 @@ object-assign
 
 /**
  * @license React
- * scheduler.production.js
+ * scheduler.development.js
  *
  * Copyright (c) Meta Platforms, Inc. and affiliates.
  *
